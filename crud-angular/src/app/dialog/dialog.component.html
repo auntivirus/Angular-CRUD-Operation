@@ -1,1 +1,47 @@
-<p>dialog works!</p>
+<h1 class="dialog-title" mat-dialog-title>Add Your Product Here</h1>
+<div mat-dialog-content>
+    <form [formGroup] = "productForm">
+      <mat-form-field appearance="outline">
+        <mat-label style="color: white">Product Name</mat-label>
+        <input formControlName="productName" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label style="color: white">Product Category</mat-label>
+      <mat-select formControlName="category"  placeholder="Category">
+        <!-- <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option> -->
+        <mat-option value="Fruits">Fruits</mat-option>
+        <mat-option value="Vegetables">Vegetables</mat-option>
+        <mat-option value="Electronics">Electronics</mat-option>
+        <mat-option value="Goodies">Goodies</mat-option>
+      </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Choose a date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="date">
+    <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <label id="example-radio-group-label">Product Quality</label>
+  <mat-radio-group aria-label="Select an option" color="primary" class="example-radio-group" formControlName="quality">
+    <mat-radio-button class="example-radio-button" *ngFor="let quality of qualityList;" [value]="quality">{{quality}}</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field appearance="outline">
+    <mat-label style="color: white">Price</mat-label>
+    <input matInput type="number" formControlName="price">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Leave a comment</mat-label>
+    <textarea matInput formControlName="comment" placeholder="Ex. It makes me feel..."></textarea>
+  </mat-form-field>
+    </form>
+
+  <div mat-dialog-actions [align]="'end'">
+    <button class="cancelButton" mat-stroked-button color="warn" mat-dialog-close>Cancel</button>
+    <button class="submitButton" mat-stroked-button color="primary" style="color: bisque" (click)="addProduct()">Submit</button>
+  </div>
+</div>

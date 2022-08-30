@@ -1,16 +1,13 @@
 <mat-toolbar color="primary">
   <button mat-icon-button class="example-icon" matTooltip="Home Page"  aria-label="Example icon-button with menu icon">
-    <mat-icon>supervised_user_circle</mat-icon>
+    <mat-label style="font-size: 30px;">🤔</mat-label>
   </button>
   <span>CRUD Opertaion in Angular</span>
   <span class="example-spacer"></span>
   <button mat-icon-button matTooltip="Add products" matTooltipPosition="left" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="openDialog()">
     <mat-icon>add_circle_outline</mat-icon>
   </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
 </mat-toolbar>
-
-
+<!-- Table Componenet -->
+<app-hometable></app-hometable>
 <router-outlet></router-outlet>

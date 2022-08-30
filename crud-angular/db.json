@@ -1,0 +1,41 @@
+{
+  "productList": [
+    {
+      "productName": "PS5",
+      "category": "Electronics",
+      "quality": "Excellent",
+      "price": 50000,
+      "comment": "Top quality PS5 console for sale",
+      "date": "2022-08-24T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Xbox One X",
+      "category": "Electronics",
+      "quality": "Good",
+      "price": 49000,
+      "comment": "...",
+      "date": "2022-08-07T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "Iron Man Funkopop",
+      "category": "Goodies",
+      "quality": "Good",
+      "price": 1500,
+      "comment": "Funkopop of Iron Man. \nuwu",
+      "date": "2022-08-29T18:30:00.000Z",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
