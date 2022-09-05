@@ -51,10 +51,10 @@
         <ng-container matColumnDef="actions">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
           <td mat-cell *matCellDef="let row">
-            <button mat-button mat-icon-button matTooltip="Edit" matTooltipPosition="left" color="">
+            <button mat-button mat-icon-button matTooltip="Edit" matTooltipPosition="left" (click)="editProduct(row)">
               <mat-icon>edit</mat-icon>
             </button>
-            <button mat-button mat-icon-button matTooltip="Delete" matTooltipPosition="right" color="warn">
+            <button (click) ="deleteProduct(row.id)" mat-button mat-icon-button matTooltip="Delete" matTooltipPosition="right" color="warn">
               <mat-icon>delete_outline</mat-icon>
             </button>
           </td>

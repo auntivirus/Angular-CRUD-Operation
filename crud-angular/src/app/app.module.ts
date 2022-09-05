@@ -21,12 +21,14 @@ import { HometableComponent } from './hometable/hometable.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { RegisterFormComponent } from './register-form/register-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DialogComponent,
-    HometableComponent
+    HometableComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,9 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatSortModule
   ],
-  providers: [],
+  providers: [
+    HometableComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

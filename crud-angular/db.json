@@ -13,8 +13,8 @@
       "productName": "Xbox One X",
       "category": "Electronics",
       "quality": "Good",
-      "price": 49000,
-      "comment": "...",
+      "price": 45000,
+      "comment": "Experience immersive 4K gaming with Xbox One X.",
       "date": "2022-08-07T18:30:00.000Z",
       "id": 2
     },
@@ -26,6 +26,42 @@
       "comment": "Funkopop of Iron Man. \nuwu",
       "date": "2022-08-29T18:30:00.000Z",
       "id": 3
+    },
+    {
+      "productName": "Tomato",
+      "category": "Vegetables",
+      "quality": "Good",
+      "price": 60,
+      "comment": "Rs. 60/kg",
+      "date": "2022-09-02T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "productName": "Pineapple",
+      "category": "Fruits",
+      "quality": "Average",
+      "price": 150,
+      "comment": "Pen Pineapple Apple Pen",
+      "date": "2022-09-03T18:30:00.000Z",
+      "id": 6
+    },
+    {
+      "productName": "Potato",
+      "category": "Fruits",
+      "quality": "Bad",
+      "price": 30,
+      "comment": "Worst potato I have tasted in my life",
+      "date": "2022-09-04T18:30:00.000Z",
+      "id": 7
+    },
+    {
+      "productName": "Apple",
+      "category": "Electronics",
+      "quality": "Excellent",
+      "price": 1299,
+      "comment": "Apple Iphone 14 Pro Max",
+      "date": "2022-10-01T18:30:00.000Z",
+      "id": 8
     }
   ],
   "comments": [

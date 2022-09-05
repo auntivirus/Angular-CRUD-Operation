@@ -1,3 +1,4 @@
+<!-- Navbar starts here -->
 <mat-toolbar color="primary">
   <button mat-icon-button class="example-icon" matTooltip="Home Page"  aria-label="Example icon-button with menu icon">
     <mat-label style="font-size: 30px;">🤔</mat-label>
@@ -7,7 +8,25 @@
   <button mat-icon-button matTooltip="Add products" matTooltipPosition="left" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" (click)="openDialog()">
     <mat-icon>add_circle_outline</mat-icon>
   </button>
+
+  <button mat-icon-button matTooltip="Register" class="example-icon favorite-icon" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop"  aria-label="Example icon-button with heart icon">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel" style="justify-content: center;">Register</h5>
+        <button type="button" mat-icon-button matTooltip="Close Form" matTooltipPosition="left" data-bs-dismiss="offcanvas" aria-label="Close">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      <div class="offcanvas-body" style="color: white; background-color: #424242;">
+        <!-- register-form componenet -->
+        <register-form></register-form>
+      </div>
+    </div>
 </mat-toolbar>
+<!-- Navbar ends here -->
+
 <!-- Table Componenet -->
 <app-hometable></app-hometable>
 <router-outlet></router-outlet>

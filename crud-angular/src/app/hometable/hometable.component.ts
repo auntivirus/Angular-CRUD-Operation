@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
 import { ApiService } from '../services/api.service';
 import {MatPaginator} from '@angular/material/paginator';
-import {MatSort, MatSortModule} from '@angular/material/sort';
+import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { DialogComponent } from '../dialog/dialog.component';
+import {MatDialog} from '@angular/material/dialog'
 
 @Component({
   selector: 'app-hometable',
@@ -17,7 +19,7 @@ export class HometableComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api: ApiService) { };
+  constructor(private api: ApiService, private dialog: MatDialog) { };
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -32,6 +34,20 @@ export class HometableComponent implements OnInit {
     }
   }
 
+  editProduct(row: any) {
+    this.dialog.open(DialogComponent, {
+      width: '30%',
+      data: row,
+    }).afterClosed().subscribe(
+      val => {
+        if( val === "update") {
+          this.getAllProducts();
+        }
+      },
+    );
+
+  };
+
   getAllProducts() {
     this.api.getProduct().subscribe({
       next: (res)=> {
@@ -43,5 +59,19 @@ export class HometableComponent implements OnInit {
         alert("Error while fetching the records!!!")
       },
     });
+  };
+
+  deleteProduct(id: number) {
+    this.api.deleteProduct(id).subscribe(
+      {
+        next: (res) => {
+          alert("Product has been removed!");
+          this.getAllProducts();
+        },
+        error: () => {
+          alert("Error while deleting the record!!!");
+        },
+      },
+    );
   };
 }
